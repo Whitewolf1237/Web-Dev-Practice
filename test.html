@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="jspractice4.js"></script> -->
+    <script>
+        function validate(){
+            if(document.myForm.address.value==""){
+                alert("Address field empty!Do fill it")
+                document.myForm.address.focus();
+                return false;
+            }
+            if(document.myForm.pin.value==""){
+                alert("PinCode field empty!Do fill it")
+                document.myForm.pin.focus();
+                return false;
+            }
+            valpincode();
+            if(document.myForm.pass.value==""){
+                alert("Password field empty!Do fill it")
+                document.myForm.pass.focus();
+                return false;
+            }
+            valpassword();
+        }
+        function valpincode(){
+                var pincode=document.myForm.pin ;
+                if(isNaN(pincode.value)){
+                    alert("Enter a numeric value for pincode")
+                    pincode.focus()
+                    return false
+                }
+                else if(pincode.value.length != 6){
+                    alert("Enter the pincode in format of XXXXXX");
+                    pincode.focus();
+                    return false
+                }
+        }
+        function valpassword(){
+            let password=document.myForm.pass ;
+            let upperCaseLetter=/[A-Z]/g;
+            if(password.value.length <= 8){
+                alert("Length of password should be 8")
+                password.focus();
+                return false
+            }
+            else if(!password.value.match(upperCaseLetter)){
+                alert("Password must contain atleast one upper Case Letter")
+                password.focus()
+                return false
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="myForm" onsubmit="return validate();">
+        <table align="center" border="1">
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <th>Pincode:</th>
+                <td><input type="text" name="pin"></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="pass"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

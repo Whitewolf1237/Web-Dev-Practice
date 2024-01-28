@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        <!--
+            function validateform(){
+                if(document.myform.name.value == "" || document.myform.name.value == null){
+                    alert("Name Empty! Enter a value");
+                    document.myform.name.focus();
+                    // document.getElementByClass(Name).innerHTML=" <img src="correct.png"> ";
+                    return false;
+                }
+                if(document.myform.father.value == "" || document.myform.father.value == null){
+                    alert("Fater name Empty! Enter a value");
+                    document.myform.father.focus();
+                    return false;
+                }
+                if(document.myform.address.value == "" || document.myform.address.value == null){
+                    alert("Fater name Empty! Enter a value");
+                    document.myform.address.focus();
+                    return false;
+                }
+                if(document.myform.Course.value==-1){
+                    alert("Select your course");
+                    document.myform.Course.focus();
+                    return false;
+                }
+
+                if(document.myform.number.value=="" || isNan(document.myform.number.value) || document.myform.number.value.lenght!=9){
+                    alert("Please enter correct 10 digit number")
+                    document.myform.number.focus();
+                    return false;
+                }
+
+                var dob=document.myform.dob.value;
+                var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+                if (dob == null || dob == "" || !pattern.test(dob)) {
+                    alert("Invalid Date Of Birth");
+                    
+                    return false; 
+                }
+            }
+            //-->
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="myform"  action="#" onsubmit="return(validateform());" >
+            <table  border="1" cellpadding="2" width="40%" bgcolor="99FFFF" align="center" cellspacing="2" name="student">
+                <caption>Student Registration Form</caption>
+                <tr>
+                    <th>Name:</th>
+                    <td align="center" class="Name"><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <th>Father:</th>
+                    <td align="center"><input type="text" name="father"></td>
+                </tr>
+                <tr>
+                    <th>Personal Address:</th>
+                    <td align="center"><input type="text" name="address"></td>
+                </tr>
+                <tr>
+                    <th>Sex:</th>
+                    <td align="center"><input type="radio" name="sex" value="Male">Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="sex" value="Female">Female</td>
+                </tr>
+                <tr>
+                    <th>Course:</th>
+                    <td align="center">
+                        <select name="Course" id="" style="text-align: center;">
+                            <option value="-1" selected>Default</option>
+                            <option value="Btech">B.TECH</option>
+                            <option value="Mtech">M.TECH</option>
+                            <option value="MCA">MCA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>E-Mail:</th>
+                    <td align="center"><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>DOB:</th>
+                    <td align="center"><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <th align="center">Mobile No:</th>
+                    <td align="center"><input type="text" name="number"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="reset"></td>
+                    <td align="center"><input type="submit" value="Submit Form"></td>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>

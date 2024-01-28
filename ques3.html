@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" onsubmit="return(validate());">
+    <table cellpadding="2" cellspacing="2"   align="center" bgcolor="aqua">
+        <caption>Railway Reservation System</caption>
+        <tr align="center">
+            <th>From:</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <th>To:</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <th>Train No:</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <th>Class:</th>
+            <td>
+                <select name="class" id="">
+                    <option value="-1" selected> Selected</option>
+                    <option value="SL">SL</option>
+                    <option value="3AC">3AC</option>
+                    <option value="2AC">2AC</option>
+                    <option value="1AC">1AC</option>
+                </select>
+            </td>
+        </tr>
+        <tr align="center">
+            <th>No. Of Seats</th>
+            <td>
+                <select name="seats" id="">
+                    <option value="-1" selected>Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        </tr>
+        <tr align="center">
+            <th>Passenger Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        <tr align="center">
+            <td><input type="text"></td>
+            <td><input type="number"></td>
+            <td><select name="Gender1" id="">
+                <option value="-1"></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select></td>
+        </tr>
+        <tr align="center">
+            <td><input type="text"></td>
+            <td><input type="number"></td>
+            <td><select name="Gender2" id="">
+                <option value="-1"></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select></td>
+        </tr>
+        <tr align="center">
+            <td><input type="text"></td>
+            <td><input type="number"></td>
+            <td><select name="Gender3" id="">
+                <option value="-1"></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select></td>
+        </tr>
+        <tr align="center">
+            <th>Address:</th>
+            <td><input type="textarea"></td>
+        </tr>
+        <tr >
+            <th>Payment Mode:</th>
+            <td><input type="radio" name="payment" value="credit/debit Card">Credit/Debit Card</td>     
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="payment" id="">Wallet/UPI</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="payment" value="Netbanking">Net Banking</td>
+        </tr>
+        <tr align="center">
+            <th>Mobile No.</th>
+            <td><input type="number"></td>
+        </tr>
+        <tr align="center">
+            <td><input type="reset"></td>
+            <td><input type="submit" value="Submit Form"></td>
+            <td><button>Cancel</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
